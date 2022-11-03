@@ -10,7 +10,6 @@ public class Main {
         lada.printInfo();
         audi.printInfo();
 
-
         //Легковые
         PassengerCars lada1 = new PassengerCars( "Лада", " Гранта", 1.5);
         PassengerCars volga = new PassengerCars(" Лада", " Волга", 2);
@@ -32,9 +31,7 @@ public class Main {
         g5.printInfo();
 
 
-
-
-
+        Driver<B>Bob = new Driver<>("Боб");
 
 
     }

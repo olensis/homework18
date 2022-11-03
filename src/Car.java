@@ -1,5 +1,5 @@
 
-public abstract class Car {
+public abstract class Car implements B {
     private String Brand;
     private String Model;
     private double engineCapacity;
