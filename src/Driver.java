@@ -1,4 +1,7 @@
-public class Driver <T extends PassengerCars & Cargo & Bus> implements  iCanDrive   {
+public class Driver <T extends Car& B& С & D> implements  iCanDrive  {
+    private T categoryB;
+    private T categoryC;
+    private T categoryD;
     private String fio;
     private String availabilityOfRights;
     private double experience;
@@ -48,6 +51,22 @@ public class Driver <T extends PassengerCars & Cargo & Bus> implements  iCanDriv
     @Override
     public void refuel() {
         System.out.println(" Я заправляюсь ");
+
+    }
+
+
+    public void B(T drive) {
+        System.out.println(" У меня категория Б");
+    }
+
+
+    public void D(T drive) {
+        System.out.println( " У меня категория Д");
+    }
+
+
+    public void С(T drive) {
+        System.out.println(" У меня категория С");
 
     }
 }
