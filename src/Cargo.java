@@ -33,4 +33,24 @@ public class Cargo extends Car implements Competing {
         System.out.println(" Максимальная скоро 150 км в час ");
 
     }
+
+    @Override
+    public void startMoving() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+
+    @Override
+    public void refuel() {
+
+    }
+
+    @Override
+    public void driver(String categori) {
+
+    }
 }

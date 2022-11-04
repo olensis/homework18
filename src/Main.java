@@ -31,7 +31,8 @@ public class Main {
         g5.printInfo();
 
 
-        Driver<B>Bob = new Driver<>("Боб");
+        Driver<iCanDrive>Bob = new Driver<>("Боб", "22",5);
+        Bob.drive();
 
 
     }
