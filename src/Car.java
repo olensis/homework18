@@ -1,8 +1,13 @@
 
-public abstract class Car implements B {
+public abstract class Car {
+    public static String Categori;
     private String Brand;
     private String Model;
     private double engineCapacity;
+    public static final String  CATEGORI_B = "Категория Б";
+    public static final String  CATEGORI_С = "Категория С";
+    public static final String  CATEGORI_D = "Категория D";
+
 
     public Car(String brand, String model, double engineCapacity) {
         Brand = brand;

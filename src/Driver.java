@@ -1,15 +1,20 @@
-public class Driver <T extends Car& B& С & D> implements  iCanDrive  {
-    private T categoryB;
-    private T categoryC;
-    private T categoryD;
+public class Driver <T extends Car& iCanDrive>   {
+
     private String fio;
     private String availabilityOfRights;
     private double experience;
+
 
     public Driver(String fio, String availabilityOfRights, double experience) {
         this.fio = fio;
         this.availabilityOfRights = availabilityOfRights;
         this.experience = experience;
+
+    }
+    public void drive(T drive){
+        System.out.println(" Я вожу машину"     );
+
+        System.out.println("Я имею права категории " + Car.CATEGORI_B);
     }
 
     public String getFio() {
@@ -36,19 +41,16 @@ public class Driver <T extends Car& B& С & D> implements  iCanDrive  {
         this.experience = experience;
     }
 
-    @Override
     public void startMoving() {
         System.out.println(" Я начинаю движение");
 
     }
 
-    @Override
     public void stop() {
         System.out.println( " Я остановился");
 
     }
 
-    @Override
     public void refuel() {
         System.out.println(" Я заправляюсь ");
 

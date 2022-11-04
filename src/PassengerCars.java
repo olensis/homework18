@@ -34,4 +34,23 @@ public class PassengerCars extends Car implements Competing{
         System.out.println(" Максимум 200 км в час");
 
     }
+
+    @Override
+    public void startMoving() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+
+    @Override
+    public void refuel() {
+
+    }
+
+    @Override
+    public void driver(String categori) {
+    }
 }
