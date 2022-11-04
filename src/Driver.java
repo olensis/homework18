@@ -13,6 +13,7 @@ public class Driver <T extends Car& iCanDrive>   {
     }
     public void drive(T drive){
         System.out.println(" Я вожу машину"     );
+
         System.out.println("Я имею права категории " + Car.CATEGORI_B);
     }
 
