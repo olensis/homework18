@@ -1,4 +1,4 @@
-public class Driver <T extends Car& iCanDrive>   {
+public class Driver <T extends Car& iCanDrive> {
 
     private String fio;
     private String availabilityOfRights;
@@ -10,11 +10,6 @@ public class Driver <T extends Car& iCanDrive>   {
         this.availabilityOfRights = availabilityOfRights;
         this.experience = experience;
 
-    }
-    public void drive(T drive){
-        System.out.println(" Я вожу машину"     );
-
-        System.out.println("Я имею права категории " + Car.CATEGORI_B);
     }
 
     public String getFio() {
@@ -47,7 +42,7 @@ public class Driver <T extends Car& iCanDrive>   {
     }
 
     public void stop() {
-        System.out.println( " Я остановился");
+        System.out.println(" Я остановился");
 
     }
 
@@ -56,19 +51,23 @@ public class Driver <T extends Car& iCanDrive>   {
 
     }
 
+    public void driveB(T car) {
+        System.out.println(" Я вожу машину "+ car.getBrand() + car.getModel());
 
-    public void B(T drive) {
-        System.out.println(" У меня категория Б");
+        System.out.println("Я имею права категории " + Car.CATEGORI_B + " и я буду учавствовать в заезде");
+
     }
 
+    public void driveC(T car) {
+        System.out.println(" Я вожу машину"+ car.getModel() + car.getBrand() );
 
-    public void D(T drive) {
-        System.out.println( " У меня категория Д");
+        System.out.println("Я имею права категории " + Car.CATEGORI_С + " и я буду учавствовать в заезде");
+
     }
 
+    public void driveD(T car) {
+        System.out.println(" Я вожу машину"+ car.getModel() + car.getBrand());
 
-    public void С(T drive) {
-        System.out.println(" У меня категория С");
-
+        System.out.println("Я имею права категории " + Car.CATEGORI_D+ " и я буду учавствовать в заезде");
     }
 }

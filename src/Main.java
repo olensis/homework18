@@ -31,8 +31,14 @@ public class Main {
         g5.printInfo();
 
 
-        Driver<iCanDrive>Bob = new Driver<>("Боб", "22",5);
-        Bob.drive();
+        Driver<Cargo>Bob = new Driver<>("Боб", "да",5);
+        Bob.driveC(gazel);
+
+        Driver<PassengerCars>Ivan = new Driver<PassengerCars>(" Иванов Иван Иванович", "да", 10);
+        Ivan.driveB(bmw);
+
+        Driver<Bus> kolia = new Driver<>("Николаев Николай Николевич", "да", 7);
+        kolia.driveD(mersedes);
 
 
     }

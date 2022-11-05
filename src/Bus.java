@@ -1,4 +1,4 @@
-public class Bus extends Car implements  Competing{
+public class Bus extends Car implements Competing, iCanDrive {
 
 
     public Bus(String brand, String model, double engineCapacity) {
@@ -34,23 +34,16 @@ public class Bus extends Car implements  Competing{
         System.out.println(" Лучшая скорость 180 км в час");
 
     }
-
-    @Override
     public void startMoving() {
 
     }
-
-    @Override
     public void stop() {
 
     }
 
-    @Override
     public void refuel() {
 
     }
-
-    @Override
     public void driver(String categori) {
 
     }

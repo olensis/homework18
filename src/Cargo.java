@@ -1,4 +1,4 @@
-public class Cargo extends Car implements Competing {
+public class Cargo extends Car implements Competing, iCanDrive {
 
     public Cargo(String brand, String model, double engineCapacity) {
         super(brand, model, engineCapacity);
@@ -51,6 +51,12 @@ public class Cargo extends Car implements Competing {
 
     @Override
     public void driver(String categori) {
+
+    }
+    public void drive(){
+        System.out.println(" Я вожу машину"  + getBrand()   );
+
+        System.out.println("Я имею права категории " + Car.CATEGORI_B);
 
     }
 }
