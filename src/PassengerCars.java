@@ -1,4 +1,4 @@
-public class PassengerCars extends Car implements Competing{
+public class PassengerCars extends Car implements Competing, iCanDrive {
 
     public PassengerCars(String brand, String model, double engineCapacity) {
         super(brand, model, engineCapacity);
@@ -34,15 +34,11 @@ public class PassengerCars extends Car implements Competing{
         System.out.println(" Максимум 200 км в час");
 
     }
-
-    @Override
     public void startMoving() {
 
     }
 
-    @Override
     public void stop() {
-
     }
 
     @Override
@@ -52,5 +48,7 @@ public class PassengerCars extends Car implements Competing{
 
     @Override
     public void driver(String categori) {
+
     }
+
 }
