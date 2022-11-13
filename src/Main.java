@@ -41,15 +41,15 @@ public class Main {
 //        bmw.printInfo();
 //
 //        // Грузовые
-        Cargo gazel = new Cargo("Лада", " Газель", 3.5);
-        Cargo solaris = new Cargo( " Хэндай", " Солярис", 2.5);
+        Cargo cargo = new Cargo("Лада", " Газель", 3.5);
+        Cargo cargo1 = new Cargo( " Хэндай", " Солярис", 2.5);
         Cargo Hyundai = new Cargo(" Хэндай", " Спортейдж", 3);
         Cargo g5 = new Cargo(" Ауди", " g5", 2);
         g5.addDriver(new Driver<>("Боб", "да",5));
         g5.addMechanik(new Mechanic<>("Александр", "Зотов", "Пирро"));
         g5.addLegal(new LegalSponsor<>("Владимир", 5000));
 
-        List <Car> cars =List.of();
+        List <Car> cars =List.of(bmw,kia, g5);
         for (Car car: cars){
             printInfo(car);
         }
