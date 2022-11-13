@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+
 public class PassengerCars extends Car implements Competing, iCanDrive {
+    private ArrayList<Car> race;
+
 
     public PassengerCars(String brand, String model, double engineCapacity) {
         super(brand, model, engineCapacity);
+
     }
 
     @Override
@@ -50,5 +55,12 @@ public class PassengerCars extends Car implements Competing, iCanDrive {
     public void driver(String categori) {
 
     }
+    public boolean sto(){
+        return Math.random()>0.5 ;
+    }
 
+    @Override
+    public void repair() {
+        System.out.println(" Машина " +getBrand() + " отремонтирована ");
+    }
 }

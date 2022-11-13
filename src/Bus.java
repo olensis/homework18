@@ -47,6 +47,15 @@ public class Bus extends Car implements Competing, iCanDrive {
     public void driver(String categori) {
 
     }
+    public boolean sto(){
+        System.out.println("Автобус в диагностике не нуждается");
+        return true ;
+    }
+
+    @Override
+    public void repair() {
+        System.out.println(" Автобус " + getBrand() + " отремонтирован ");
+    }
 }
 
 

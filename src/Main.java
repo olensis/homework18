@@ -1,45 +1,97 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Автобусы
-        Bus mersedes= new Bus ("Мерседес", " 151", 4);
-        Bus lada = new Bus("Лада", "112", 3);
-        Bus audi = new Bus("Ауди", " АР22", 5);
-        Bus kia= new Bus("Киа", " А5", 3);
-        kia.printInfo();
-        mersedes.printInfo();
-        lada.printInfo();
-        audi.printInfo();
 
-        //Легковые
+
+//        // Автобусы
+//
+       Mechanic<Car> vova= new Mechanic<>("Владимир", "Петров", "Лучшая");
+       LegalSponsor<Car> ph= new LegalSponsor<>("Роснефть", 200000);
+
+
+
+
+       Bus mersedes= new Bus ("Мерседес", " 151", 4);
+       Bus lada = new Bus("Лада", "112", 3);
+       Bus audi = new Bus("Ауди", " АР22", 5);
+       Bus kia= new Bus("Киа", " А5", 3);
+       kia.addDriver(new Driver<>("Николаев Николай Николевич", "да", 7));
+       kia.addMechanik(new Mechanic<>("Петр", "Иванов","Юниверсал"));
+       kia.addLegal(new LegalSponsor<>("Бюджети компани", 10500));
+       kia.addMechanik(vova);
+
+//        kia.printInfo();
+//        mersedes.printInfo();
+//        lada.printInfo();
+//        audi.printInfo();
+//
+//        //Легковые
         PassengerCars lada1 = new PassengerCars( "Лада", " Гранта", 1.5);
         PassengerCars volga = new PassengerCars(" Лада", " Волга", 2);
         PassengerCars spectra = new PassengerCars("Киа", " Спектра", 2);
         PassengerCars bmw = new PassengerCars("БМВ", " i8", 3);
-        volga.printInfo();
-        lada1.printInfo();
-        spectra.printInfo();
-        bmw.printInfo();
-
-        // Грузовые
+        bmw.addDriver(new Driver<PassengerCars>(" Иванов Иван Иванович", "да", 10));
+        bmw.addMechanik(new Mechanic<>("Николай", "Иванов", "Вагнер"));
+        bmw.addPhysics(new physicalSponsor<>("Екатерина", 20000));
+//        volga.printInfo();
+//        lada1.printInfo();
+//        spectra.printInfo();
+//        bmw.printInfo();
+//
+//        // Грузовые
         Cargo gazel = new Cargo("Лада", " Газель", 3.5);
         Cargo solaris = new Cargo( " Хэндай", " Солярис", 2.5);
         Cargo Hyundai = new Cargo(" Хэндай", " Спортейдж", 3);
         Cargo g5 = new Cargo(" Ауди", " g5", 2);
-        gazel.printInfo();
-        solaris.printInfo();
-        Hyundai.printInfo();
-        g5.printInfo();
+        g5.addDriver(new Driver<>("Боб", "да",5));
+        g5.addMechanik(new Mechanic<>("Александр", "Зотов", "Пирро"));
+        g5.addLegal(new LegalSponsor<>("Владимир", 5000));
+
+        List <Car> cars =List.of();
+        for (Car car: cars){
+            printInfo(car);
+        }
 
 
-        Driver<Cargo>Bob = new Driver<>("Боб", "да",5);
-        Bob.driveC(gazel);
 
-        Driver<PassengerCars>Ivan = new Driver<PassengerCars>(" Иванов Иван Иванович", "да", 10);
-        Ivan.driveB(bmw);
+//        gazel.printInfo();
+//        solaris.printInfo();
+//        Hyundai.printInfo();
+//        g5.printInfo();
+//
+//
 
-        Driver<Bus> kolia = new Driver<>("Николаев Николай Николевич", "да", 7);
-        kolia.driveD(mersedes);
+
+
+
 
 
     }
+    private  static void printInfo(Car car){
+
+        System.out.println("Информация по машине "  + car.getBrand() + car.getModel()) ;
+        System.out.println("Водители:");
+        for (Driver<?> driver: car.getDrivers()){
+            System.out.println(driver.getFio());
+            System.out.println("Спонсоры:");
+            for (physicalSponsor<?> physicalSponsor: car.getPhysicalSponsors()){
+                System.out.println(physicalSponsor.getName() + physicalSponsor.getAmount());
+                System.out.println("Спонсоры:");
+                for (LegalSponsor<?> legalSponsor : car.getLegalSponsors()){
+                    System.out.println(legalSponsor.getCompanyName() + legalSponsor.getAmount());
+                    System.out.println("Механики :");
+                    for (Mechanic<?> mechanic : car.getMechanics()){
+                        System.out.println(mechanic.getName() + mechanic.getSurname() + mechanic.getCompany());
+                    }
+                }
+
+        }
+
+        }
+
+
+    }
+
 }

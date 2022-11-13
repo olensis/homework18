@@ -59,4 +59,12 @@ public class Cargo extends Car implements Competing, iCanDrive {
         System.out.println("Я имею права категории " + Car.CATEGORI_B);
 
     }
+    public boolean sto(){
+        return Math.random()>0.5 ;
+    }
+
+    @Override
+    public void repair() {
+        System.out.println("Грузовик " + getBrand() + " отремонтирован ");
+    }
 }
